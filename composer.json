@@ -14,7 +14,7 @@
             "IztokSvetik\\SilexAmqp\\Tests\\": "tests/"
         }
     },
-    "minimum-stability" : "dev",
+    "minimum-stability" : "1.0",
     "prefer-stable" : true,
     "require" : {
         "php" : ">=5.3",
