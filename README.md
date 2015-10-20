@@ -53,7 +53,7 @@ $app->register(new AmqpServiceProvider(), [
         'default' => [
             'host'      => 'localhost', // optional - default "localhost"
             'port'      => 5672,        // optional - default 5672
-            'user'      => 'guest',     // optional - default "guest"
+            'login'     => 'guest',     // optional - default "guest"
             'password'  => 'guest',     // optional - default "guest"
             'vhost'     => '/',         // optional - default "/"
             'lazy'      => false        // optional - default false
