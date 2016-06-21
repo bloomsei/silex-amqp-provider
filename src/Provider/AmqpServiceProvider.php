@@ -131,6 +131,7 @@ class AmqpServiceProvider implements ServiceProviderInterface
             }
 
             $consumerFactory = new ConsumerFactory('AMQPChannel', 'AMQPQueue');
+
             $consumers = [];
             foreach($app['amqp.consumers'] as $name => $options) {
                 $connection = $this->getConnection($app, $options);
