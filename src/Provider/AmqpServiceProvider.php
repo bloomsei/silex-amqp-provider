@@ -84,6 +84,10 @@ class AmqpServiceProvider implements ServiceProviderInterface
     private function loadProducers(Application $app)
     {
         $app['amqp.producer'] = $app->share(function($app) {
+            if(!isset($app['amqp.producers'])){
+                return;
+            }
+
             $producerFactory = new ProducerFactory('AMQPChannel', 'AMQPExchange', 'AMQPQueue');
 
             $producers = [];
@@ -122,6 +126,10 @@ class AmqpServiceProvider implements ServiceProviderInterface
     private function loadConsumers(Application $app)
     {
         $app['amqp.consumer'] = $app->share(function($app) {
+            if(!isset($app['amqp.consumers'])){
+                return;
+            }
+
             $consumerFactory = new ConsumerFactory('AMQPChannel', 'AMQPQueue');
 
             $consumers = [];
